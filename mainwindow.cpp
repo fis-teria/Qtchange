@@ -58,9 +58,12 @@ char* MainWindow::mojiArray()
 void MainWindow::mousePressEvent(QMouseEvent *event)
 {
     QPoint p = event -> pos();
+    QPoint s = ui->label->pos();
     std::string x = std::__cxx11::to_string(p.x());
     std::string y = std::__cxx11::to_string(p.y());
-    std::string str = "x = " + x + "y = " + y;
+    std::string sx = std::__cxx11::to_string(s.x());
+    std::string sy = std::__cxx11::to_string(s.y());
+    std::string str = "mouse x = " + x + "y = " + y + "label x = " + sx + "y = " + sy;
     ui->point->setText(QString::fromLocal8Bit(str));
     qDebug() << event -> pos();
 }

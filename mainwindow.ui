@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="viewFinder">
+     <widget class="QLabel" name="label">
       <property name="text">
        <string/>
       </property>
@@ -26,7 +26,7 @@
      <widget class="QLineEdit" name="point"/>
     </item>
     <item>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="viewFinder">
       <property name="text">
        <string/>
       </property>
