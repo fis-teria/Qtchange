@@ -14,6 +14,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -24,13 +25,12 @@ public:
     ~MainWindow();
 private slots:
     void openImage();
-
-private slots:
     void changeHorizon();
     void buttonNext();
     void buttonBack();
     void buttonRetake();
     void takePicture();
+    void postionOfImage(QMouseEvent *event);
 
 private:
     cv::Mat colorChange(cv::Mat img);

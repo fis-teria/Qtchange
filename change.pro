@@ -20,11 +20,15 @@ LIBS += -L/usr/include/ \
 SOURCES += \
     imageaccess.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    qclickablelabel.cpp \
+    qclickedlabel.cpp
 
 HEADERS += \
     imageaccess.h \
-    mainwindow.h
+    mainwindow.h \
+    qclickablelabel.h \
+    qclickedlabel.h
 
 FORMS += \
     mainwindow.ui

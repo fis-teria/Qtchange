@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>3</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page_3">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -86,16 +86,26 @@
       <widget class="QWidget" name="page_5">
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
-         <widget class="QLabel" name="captureImage">
+         <widget class="QClickedLabel" name="captureImage">
           <property name="text">
            <string/>
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_2"/>
+        </item>
         <item alignment="Qt::AlignHCenter">
          <widget class="QLabel" name="notice">
           <property name="text">
            <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="protoNextr">
+          <property name="text">
+           <string>Next</string>
           </property>
          </widget>
         </item>
@@ -188,6 +198,16 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QClickedLabel</class>
+   <extends>QLabel</extends>
+   <header>qclickedlabel.h</header>
+   <slots>
+    <signal>clickedLabel()</signal>
+   </slots>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>
@@ -318,6 +338,38 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>captureImage</sender>
+   <signal>clickedLabel()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>postonOfImage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>172</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>protoNextr</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>buttonNext()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>openImage()</slot>
@@ -327,5 +379,6 @@
   <slot>takePicture()</slot>
   <slot>buttonBack()</slot>
   <slot>buttonRetake()</slot>
+  <slot>postonOfImage()</slot>
  </slots>
 </ui>
