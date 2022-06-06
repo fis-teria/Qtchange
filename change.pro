@@ -18,10 +18,12 @@ LIBS += -L/usr/include/ \
      -lopencv_imgcodecs\
 
 SOURCES += \
+    imageaccess.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    imageaccess.h \
     mainwindow.h
 
 FORMS += \

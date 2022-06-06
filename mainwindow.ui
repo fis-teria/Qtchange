@@ -14,39 +14,146 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string/>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>3</number>
       </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="point"/>
-    </item>
-    <item>
-     <widget class="QLabel" name="viewFinder">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton">
-      <property name="text">
-       <string>change</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit"/>
-    </item>
-    <item>
-     <widget class="QPushButton" name="moji">
-      <property name="text">
-       <string>moji</string>
-      </property>
+      <widget class="QWidget" name="page_3">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="viewFinder">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="point"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>change</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="moji">
+          <property name="text">
+           <string>moji</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonNext">
+          <property name="text">
+           <string>NEXT</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_4">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="camearaView">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="takePicture">
+          <property name="text">
+           <string>TAKE A PICTURE</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_5">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="captureImage">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="notice">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_6">
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>9</y>
+          <width>761</width>
+          <height>521</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLabel" name="captureSelect">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="noticeCheck">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QPushButton" name="ok">
+             <property name="text">
+              <string>OK!</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="back">
+             <property name="text">
+              <string>抽出選択に戻る</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="retake">
+             <property name="text">
+              <string>再撮影</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -116,6 +223,22 @@
    </hints>
   </connection>
   <connection>
+   <sender>moji</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>mojiHyouji()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>556</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
    <sender>pushButton</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
@@ -132,14 +255,62 @@
    </hints>
   </connection>
   <connection>
-   <sender>moji</sender>
+   <sender>buttonNext</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>mojiHyouji()</slot>
+   <slot>buttonNext()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>399</x>
-     <y>556</y>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>takePicture</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>takePicture()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>retake</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>buttonRetake()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>652</x>
+     <y>479</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>back</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>buttonBack()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>398</x>
+     <y>479</y>
     </hint>
     <hint type="destinationlabel">
      <x>399</x>
@@ -152,5 +323,9 @@
   <slot>openImage()</slot>
   <slot>changeHorizon()</slot>
   <slot>mojiHyouji()</slot>
+  <slot>buttonNext()</slot>
+  <slot>takePicture()</slot>
+  <slot>buttonBack()</slot>
+  <slot>buttonRetake()</slot>
  </slots>
 </ui>

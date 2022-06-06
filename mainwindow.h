@@ -18,6 +18,7 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
+
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -26,6 +27,10 @@ private slots:
 
 private slots:
     void changeHorizon();
+    void buttonNext();
+    void buttonBack();
+    void buttonRetake();
+    void takePicture();
 
 private:
     cv::Mat colorChange(cv::Mat img);
