@@ -5,11 +5,12 @@
 
 class QClickableLabel : public QLabel
 {
+    Q_OBJECT
 public:
     QClickableLabel();
     ~QClickableLabel();
-signs:
-    clicked();
+signals:
+    clickedLabel();
 
 protected:
     void mousePressEvent(QMouseEvent *e);

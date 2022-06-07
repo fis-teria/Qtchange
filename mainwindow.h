@@ -9,6 +9,7 @@
 #include <QCamera>
 #include <math.h>
 #include <QMouseEvent>
+#include "qclickedlabel.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -30,7 +31,7 @@ private slots:
     void buttonBack();
     void buttonRetake();
     void takePicture();
-    void postionOfImage(QMouseEvent *event);
+    void positionOfImage();
 
 private:
     cv::Mat colorChange(cv::Mat img);

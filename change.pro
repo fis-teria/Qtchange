@@ -21,14 +21,14 @@ SOURCES += \
     imageaccess.cpp \
     main.cpp \
     mainwindow.cpp \
-    qclickablelabel.cpp \
-    qclickedlabel.cpp
+    qclickedlabel.cpp \
+    stackedpoint.cpp
 
 HEADERS += \
     imageaccess.h \
     mainwindow.h \
-    qclickablelabel.h \
-    qclickedlabel.h
+    qclickedlabel.h \
+    stackedpoint.h
 
 FORMS += \
     mainwindow.ui

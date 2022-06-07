@@ -2,6 +2,7 @@
 #include "mainwindow.h"
 #include "imageaccess.h"
 #include "qclickedlabel.h"
+#include "stackedpoint.h"
 
 #include "./ui_mainwindow.h"
 #include <QMouseEvent>
@@ -25,6 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     //camera->start();
     ui->notice->setText(QString::fromLocal8Bit("画像の抽出したい部分を選んでください"));
     ui->noticeCheck->setText(QString::fromLocal8Bit("この部分を抽出するのでよろしいですか？"));
+
 }
 
 MainWindow::~MainWindow()
@@ -69,16 +71,7 @@ char* MainWindow::mojiArray()
 void MainWindow::mousePressEvent(QMouseEvent *event)
 {
     QPoint p = event -> pos();
-    QPoint s = ui->label->pos();
-    std::string x = std::__cxx11::to_string(p.x() -10);
-    std::string y = std::__cxx11::to_string(p.y()-32);
-    std::string sx = std::__cxx11::to_string(s.x());
-    std::string sy = std::__cxx11::to_string(s.y());
-    if(p.x()>0 && p.y() > 0){
-        std::string str = "mouse x = " + x + "y = " + y + "label x = " + sx + "y = " + sy;
-        ui->point->setText(QString::fromLocal8Bit(str));
-    }
-    //qDebug() << event -> pos();
+    StackedPoint::pushPoint(p);
 }
 
 
@@ -99,7 +92,7 @@ void MainWindow::changeHorizon()
     //dst = colorChange(dst);
     cv::cvtColor(dst,dst,cv::COLOR_BGR2RGB);
     QImage img(dst.data, dst.cols, dst.rows, QImage::Format_RGB888);
-    ui->label->setPixmap(QPixmap::fromImage(img));
+    ui->camearaView->setPixmap(QPixmap::fromImage(img));
 
 }
 
@@ -134,20 +127,46 @@ void MainWindow::takePicture()
     ui->captureImage->setPixmap(QPixmap::fromImage(img));
 }
 
-void MainWindow::postionOfImage(QMouseEvent *event)
+void colortake(const cv::Mat &src, int num[3], int xtouch, int ytouch)
 {
-    QPoint p = event -> pos();
-    QPoint s = ui->captureImage->pos();
+  num[0] = 0, num[1] = 0, num[2] = 0;
+  if(xtouch - 10 < 0)  xtouch += 10;
+  if(xtouch + 10 > src.cols)  xtouch -= 10;
+  if(ytouch - 10 < 0)  ytouch += 10;
+  if(ytouch + 10 > src.rows)  ytouch -= 10;
+​
+  for(int x = -10; x < 10; x++){
+    for(int y = -10; y < 10; y++){
+      num[0] += src.at<cv::Vec3b>(y+ytouch,x+xtouch)[0];
+      num[1] += src.at<cv::Vec3b>(y+ytouch,x+xtouch)[1];
+      num[2] += src.at<cv::Vec3b>(y+ytouch,x+xtouch)[2];
+    }
+  }
+  num[0] = num[0]/441;
+  num[1] = num[1]/441;
+  num[2] = num[2]/441;
+}
+
+
+void MainWindow::positionOfImage()
+{
+    QPoint p = StackedPoint::getPoint();
+    QPoint s;
+    cv::Mat img;
+    img = imageAccess::returnImage(img);
+    s.setX(img.cols);
+    s.setY(img.rows);
     std::string x = std::__cxx11::to_string(p.x());
     std::string y = std::__cxx11::to_string(p.y());
     std::string sx = std::__cxx11::to_string(s.x());
     std::string sy = std::__cxx11::to_string(s.y());
-    if(p.x()>0 && p.y() > 0){
+
+    if(((p.x()>0) && (p.y() > 0)) && ((p.x()) < s.x()) && (p.y() < s.y())){
         std::string str = "mouse x = " + x + "y = " + y + "label x = " + sx + "y = " + sy;
-        ui->point->setText(QString::fromLocal8Bit(str));
+        ui->lineEdit_2->setText(QString::fromLocal8Bit(str));
     }
-    qDebug() << event -> pos();
 }
+
 
 
 

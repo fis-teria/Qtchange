@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page_3">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -78,6 +78,13 @@
          <widget class="QPushButton" name="takePicture">
           <property name="text">
            <string>TAKE A PICTURE</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="text">
+           <string>PushButton</string>
           </property>
          </widget>
         </item>
@@ -342,7 +349,7 @@
    <sender>captureImage</sender>
    <signal>clickedLabel()</signal>
    <receiver>MainWindow</receiver>
-   <slot>postonOfImage()</slot>
+   <slot>positionOfImage()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>399</x>
@@ -370,6 +377,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeHorizon()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>openImage()</slot>
@@ -379,6 +402,6 @@
   <slot>takePicture()</slot>
   <slot>buttonBack()</slot>
   <slot>buttonRetake()</slot>
-  <slot>postonOfImage()</slot>
+  <slot>positionOfImage()</slot>
  </slots>
 </ui>
