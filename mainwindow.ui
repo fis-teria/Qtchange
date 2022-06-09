@@ -18,44 +18,10 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page_3">
        <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <widget class="QLabel" name="label">
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="viewFinder">
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="point"/>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton">
-          <property name="text">
-           <string>change</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit"/>
-        </item>
-        <item>
-         <widget class="QPushButton" name="moji">
-          <property name="text">
-           <string>moji</string>
-          </property>
-         </widget>
-        </item>
         <item>
          <widget class="QPushButton" name="buttonNext">
           <property name="text">
@@ -68,7 +34,7 @@
       <widget class="QWidget" name="page_4">
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <widget class="QLabel" name="camearaView">
+         <widget class="QLabel" name="cameraView">
           <property name="text">
            <string/>
           </property>
@@ -78,13 +44,6 @@
          <widget class="QPushButton" name="takePicture">
           <property name="text">
            <string>TAKE A PICTURE</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_2">
-          <property name="text">
-           <string>PushButton</string>
           </property>
          </widget>
         </item>
@@ -99,20 +58,10 @@
           </property>
          </widget>
         </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_2"/>
-        </item>
         <item alignment="Qt::AlignHCenter">
          <widget class="QLabel" name="notice">
           <property name="text">
            <string>TextLabel</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="protoNextr">
-          <property name="text">
-           <string>Next</string>
           </property>
          </widget>
         </item>
@@ -250,38 +199,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>moji</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>mojiHyouji()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>399</x>
-     <y>556</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>changeHorizon()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>399</x>
-     <y>556</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>buttonNext</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
@@ -361,38 +278,6 @@
     </hint>
    </hints>
   </connection>
-  <connection>
-   <sender>protoNextr</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>buttonNext()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>399</x>
-     <y>547</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_2</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>changeHorizon()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>399</x>
-     <y>547</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
  </connections>
  <slots>
   <slot>openImage()</slot>
@@ -403,5 +288,6 @@
   <slot>buttonBack()</slot>
   <slot>buttonRetake()</slot>
   <slot>positionOfImage()</slot>
+  <slot>cameraButton()</slot>
  </slots>
 </ui>

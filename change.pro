@@ -18,6 +18,7 @@ LIBS += -L/usr/include/ \
      -lopencv_imgcodecs\
 
 SOURCES += \
+    camerathread.cpp \
     imageaccess.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
     stackedpoint.cpp
 
 HEADERS += \
+    camerathread.h \
     imageaccess.h \
     mainwindow.h \
     qclickedlabel.h \

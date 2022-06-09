@@ -10,6 +10,8 @@
 #include <math.h>
 #include <QMouseEvent>
 #include "qclickedlabel.h"
+#include "camerathread.h"
+#include <QThread>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,9 +26,10 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+public slots:
+    void periodic_works(int i);
+
 private slots:
-    void openImage();
-    void changeHorizon();
     void buttonNext();
     void buttonBack();
     void buttonRetake();
@@ -35,14 +38,20 @@ private slots:
 
 private:
     cv::Mat colorChange(cv::Mat img);
-    char* mojiArray();
     void mousePressEvent(QMouseEvent *event);
+    void colortake(const cv::Mat &src, int num[3], int xtouch, int ytouch);
+    bool checkCameraAvailability();
+    void useCamera();
+    void cameraOff();
+    void cameraOn();
+    bool cameraCheck();
 
-private slots:
-    void mojiHyouji();
 
 private:
     Ui::MainWindow *ui;
-    QCamera *camera;
+    cameraThread camera_thread;
+public:
+    static int cameraflg;
+    static cv::Mat view;
 };
 #endif // MAINWINDOW_H
