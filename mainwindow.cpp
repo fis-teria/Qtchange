@@ -17,6 +17,7 @@
 
 int MainWindow::cameraflg = 0;
 cv::Mat MainWindow::view = cv::Mat(1,1,CV_8UC3);
+cv::VideoCapture MainWindow::cap(0);
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -48,7 +49,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::periodic_works(int i)
 {
-    cv::VideoCapture cap(0);
     cap >> view;
     cv::resize(view,view,cv::Size(),0.6,0.6);
     cv::cvtColor(view,view,cv::COLOR_BGR2RGB);
@@ -95,7 +95,7 @@ void MainWindow::takePicture()
 {
     //cameraOff();
     cv::Mat dst;
-    cv::VideoCapture cap(0);
+    //cv::VideoCapture cap(0);
     cap >> dst;
     cv::resize(dst,dst,cv::Size(),0.6,0.6);
     imageAccess::strageImage(dst);

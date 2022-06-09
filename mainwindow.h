@@ -53,5 +53,6 @@ private:
 public:
     static int cameraflg;
     static cv::Mat view;
+    static cv::VideoCapture cap;
 };
 #endif // MAINWINDOW_H

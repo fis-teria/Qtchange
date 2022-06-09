@@ -12,7 +12,7 @@ void cameraThread::run()
     QTimer timer;
     connect(&timer,&QTimer::timeout, this, &cameraThread::timerHit);
 
-    timer.setInterval(700);
+    timer.setInterval(200);
     timer.start();
     qDebug("debug:Thread Start\n");
     exec();
