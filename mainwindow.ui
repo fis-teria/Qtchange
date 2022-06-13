@@ -83,6 +83,9 @@
            <property name="text">
             <string>TextLabel</string>
            </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
           </widget>
          </item>
          <item>
@@ -90,12 +93,15 @@
            <property name="text">
             <string>TextLabel</string>
            </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
           </widget>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
-            <widget class="QPushButton" name="ok">
+            <widget class="QPushButton" name="ok2Result">
              <property name="text">
               <string>OK!</string>
              </property>
@@ -112,6 +118,110 @@
             <widget class="QPushButton" name="retake">
              <property name="text">
               <string>再撮影</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_7">
+       <widget class="QWidget" name="verticalLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>761</width>
+          <height>521</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="QLabel" name="getPoint">
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="message">
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <widget class="QLabel" name="theme">
+               <property name="text">
+                <string>QC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="quesName">
+               <property name="text">
+                <string>Q</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="yours">
+               <property name="text">
+                <string>P</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="pSelected">
+               <property name="text">
+                <string>PC</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QPushButton" name="toReplay">
+             <property name="text">
+              <string>もう一度遊ぶ</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="toStart">
+             <property name="text">
+              <string>スタート画面に戻る</string>
              </property>
             </widget>
            </item>
@@ -137,7 +247,6 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionopen"/>
     <addaction name="actionquit"/>
    </widget>
    <addaction name="menuFile"/>
@@ -166,22 +275,6 @@
  </customwidgets>
  <resources/>
  <connections>
-  <connection>
-   <sender>actionopen</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>openImage()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>actionquit</sender>
    <signal>triggered()</signal>
@@ -278,6 +371,54 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>ok2Result</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ok2Result()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>143</x>
+     <y>480</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toReplay</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toReplay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>385</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toStart</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toStart()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>445</x>
+     <y>385</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>openImage()</slot>
@@ -289,5 +430,8 @@
   <slot>buttonRetake()</slot>
   <slot>positionOfImage()</slot>
   <slot>cameraButton()</slot>
+  <slot>ok2Result()</slot>
+  <slot>toStart()</slot>
+  <slot>toReplay()</slot>
  </slots>
 </ui>

@@ -22,7 +22,6 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -35,24 +34,28 @@ private slots:
     void buttonRetake();
     void takePicture();
     void positionOfImage();
+    void ok2Result();
+    void toStart();
+    void toReplay();
 
 private:
-    cv::Mat colorChange(cv::Mat img);
     void mousePressEvent(QMouseEvent *event);
     void colortake(const cv::Mat &src, int num[3], int xtouch, int ytouch);
     bool checkCameraAvailability();
-    void useCamera();
     void cameraOff();
     void cameraOn();
-    bool cameraCheck();
-
+    double score_calc(const cv::Mat &ques_rgb, const cv::Mat &player_rgb);
 
 private:
     Ui::MainWindow *ui;
     cameraThread camera_thread;
 public:
     static int cameraflg;
+    static int pageNum;
     static cv::Mat view;
+    static cv::Mat dst;
     static cv::VideoCapture cap;
+    static cv::Mat theme;
+    static cv::Mat player_col;
 };
 #endif // MAINWINDOW_H

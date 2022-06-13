@@ -9,9 +9,9 @@ QClickedLabel::QClickedLabel(QWidget *parent)
 
 void QClickedLabel::mousePressEvent(QMouseEvent *e)
 {
-    emit clickedLabel();
     StackedPoint::pushPoint(e->pos());
     qDebug() << e->pos();
+    emit clickedLabel();
 
 }
 
