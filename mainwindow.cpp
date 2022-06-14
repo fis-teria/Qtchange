@@ -205,9 +205,9 @@ double MainWindow::score_calc(const cv::Mat &ques_rgb, const cv::Mat &player_rgb
         ques[i] = ques_hsv.at<cv::Vec3b>(y, x)[i];
         player[i] = player_hsv.at<cv::Vec3b>(y, x)[i];
     }
-    //qDebug("quesH = %lf, playerH = %lf",ques[0]*2,player[0]*2);
-    //qDebug("quesS = %lf, playerS = %lf",ques[1],player[1]);
-    //qDebug("quesV = %lf, playerV = %lf",ques[2],player[2]);
+    qDebug("quesH = %lf, playerH = %lf",ques[0]*2,player[0]*2);
+    qDebug("quesS = %lf, playerS = %lf",ques[1],player[1]);
+    qDebug("quesV = %lf, playerV = %lf",ques[2],player[2]);
 
     out_H = (double)(abs(ques[0] - player[0]) / 180) * (1.8) * 100;
     out_S = (double)(abs(ques[1] - player[1]) / 255) * (0.333) * 100;
@@ -222,6 +222,8 @@ qDebug("H %lf S %lf V %lf",out_H, out_S, out_V);
     point = 100 - (out_H + out_S + out_V);
     if(point > 100)
         point = 100;
+    if(point < 0)
+        point = 0;
     return point;
 }
 

@@ -23,7 +23,7 @@ void cameraThread::run()
 
 void cameraThread::timerHit()
 {
-    qDebug("timer hit\n");fflush(stdout);
+    //qDebug("timer hit\n");fflush(stdout);
     static int i;
     emit data_update(i++);
 }
