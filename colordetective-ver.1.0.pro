@@ -2,7 +2,7 @@ QT       += core gui multimedia multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++17 c++11
+CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -18,6 +18,13 @@ LIBS += -L/usr/include/ \
      -lopencv_imgcodecs\
 
 SOURCES += \
+    ../enshu3/colordetective.cpp \
+    ../enshu3/cv.cpp \
+    ../enshu3/form.cpp \
+    ../enshu3/gamemode.cpp \
+    ../enshu3/start.cpp \
+    ../enshu3/target.cpp \
+    ../enshu3/targeth.cpp \
     camerathread.cpp \
     imageaccess.cpp \
     main.cpp \
@@ -26,6 +33,13 @@ SOURCES += \
     stackedpoint.cpp
 
 HEADERS += \
+    ../enshu3/colordetective.h \
+    ../enshu3/cv.h \
+    ../enshu3/form.h \
+    ../enshu3/gamemode.h \
+    ../enshu3/start.h \
+    ../enshu3/target.h \
+    ../enshu3/targeth.h \
     camerathread.h \
     imageaccess.h \
     mainwindow.h \
@@ -33,6 +47,12 @@ HEADERS += \
     stackedpoint.h
 
 FORMS += \
+    ../enshu3/colordetective.ui \
+    ../enshu3/form.ui \
+    ../enshu3/gamemode.ui \
+    ../enshu3/start.ui \
+    ../enshu3/target.ui \
+    ../enshu3/targeth.ui \
     mainwindow.ui
 
 #destination folder
@@ -72,3 +92,17 @@ else: linux {
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    ../enshu3/data.png \
+    ../enshu3/enshu3.pro.user.4540fc4 \
+    ../enshu3/logo-1.png \
+    ../enshu3/logo.png \
+    ../enshu3/tantei.png \
+    logo-1.png \
+    logo.png \
+    tantei.png
+
+SUBDIRS += \
+    ../enshu3/enshu3.pro \
+    ../enshu3/enshu3.pro

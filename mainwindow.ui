@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>830</width>
+    <height>617</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,16 +18,249 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>4</number>
       </property>
-      <widget class="QWidget" name="page_3">
-       <layout class="QVBoxLayout" name="verticalLayout">
+      <widget class="QWidget" name="page">
+       <layout class="QVBoxLayout" name="verticalLayout_13">
         <item>
-         <widget class="QPushButton" name="buttonNext">
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QLabel" name="logoStart">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="detStart">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="startButton">
+              <property name="text">
+               <string>START</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="exitButton">
+              <property name="text">
+               <string>EXIT</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="creditButton">
+              <property name="text">
+               <string>CREDIT</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <widget class="QLabel" name="logoGM">
           <property name="text">
-           <string>NEXT</string>
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="frameShape">
+           <enum>QFrame::WinPanel</enum>
+          </property>
+          <property name="text">
+           <string>GAMEMODE</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="messageGM">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="detGM">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QPushButton" name="easyButton">
+            <property name="text">
+             <string>EASY</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="hardButton">
+            <property name="text">
+             <string>HARD</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="gameStart">
+            <property name="text">
+             <string>GAMESTART</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_8">
+       <layout class="QVBoxLayout" name="verticalLayout_12">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <widget class="QLabel" name="ImageTarget">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Image</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="NameTarget">
+            <property name="text">
+             <string>Target</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QPushButton" name="changeColorButton">
+              <property name="text">
+               <string>Change Color</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="nextTarget">
+              <property name="text">
+               <string>Next</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
@@ -56,179 +289,208 @@
           <property name="text">
            <string/>
           </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
          </widget>
         </item>
-        <item alignment="Qt::AlignHCenter">
+        <item>
          <widget class="QLabel" name="notice">
           <property name="text">
            <string>TextLabel</string>
           </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
          </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QPushButton" name="retakeGetC">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="hint">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
       <widget class="QWidget" name="page_6">
-       <widget class="QWidget" name="verticalLayoutWidget">
-        <property name="geometry">
-         <rect>
-          <x>9</x>
-          <y>9</y>
-          <width>761</width>
-          <height>521</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_5">
-         <item>
-          <widget class="QLabel" name="captureSelect">
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="noticeCheck">
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout">
-           <item>
-            <widget class="QPushButton" name="ok2Result">
-             <property name="text">
-              <string>OK!</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="back">
-             <property name="text">
-              <string>抽出選択に戻る</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="retake">
-             <property name="text">
-              <string>再撮影</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_14">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="captureSelect">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="noticeCheck">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QPushButton" name="retake">
+              <property name="text">
+               <string>再撮影</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="back">
+              <property name="text">
+               <string>抽出選択に戻る</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="ok2Result">
+              <property name="text">
+               <string>OK!</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="page_7">
-       <widget class="QWidget" name="verticalLayoutWidget_2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>761</width>
-          <height>521</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_6">
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_3">
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_7">
-             <item>
-              <widget class="QLabel" name="getPoint">
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="message">
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_8">
-             <item>
-              <widget class="QLabel" name="theme">
-               <property name="text">
-                <string>QC</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="quesName">
-               <property name="text">
-                <string>Q</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="yours">
-               <property name="text">
-                <string>P</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="pSelected">
-               <property name="text">
-                <string>PC</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
-           <item>
-            <widget class="QPushButton" name="toReplay">
-             <property name="text">
-              <string>もう一度遊ぶ</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="toStart">
-             <property name="text">
-              <string>スタート画面に戻る</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <widget class="QLabel" name="hsv">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="getPoint">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="bgr">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="message">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <widget class="QLabel" name="theme">
+                <property name="text">
+                 <string>QC</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="quesName">
+                <property name="text">
+                 <string>Q</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="yours">
+                <property name="text">
+                 <string>P</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="pSelected">
+                <property name="text">
+                 <string>PC</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="toReplay">
+              <property name="text">
+               <string>もう一度遊ぶ</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="toStart">
+              <property name="text">
+               <string>スタート画面に戻る</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -239,7 +501,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>830</width>
      <height>27</height>
     </rect>
    </property>
@@ -292,14 +554,94 @@
    </hints>
   </connection>
   <connection>
-   <sender>buttonNext</sender>
+   <sender>easyButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>easyFlg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>148</x>
+     <y>507</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>captureImage</sender>
+   <signal>clickedLabel()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>positionOfImage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>172</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nextTarget</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>buttonNext()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>399</x>
-     <y>547</y>
+     <x>613</x>
+     <y>484</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gameStart</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>next2TargetMode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>679</x>
+     <y>507</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hardButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>hardFlg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>507</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>retake</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>buttonRetake()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>652</x>
+     <y>479</y>
     </hint>
     <hint type="destinationlabel">
      <x>399</x>
@@ -324,22 +666,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>retake</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>buttonRetake()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>652</x>
-     <y>479</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>back</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
@@ -356,14 +682,78 @@
    </hints>
   </connection>
   <connection>
-   <sender>captureImage</sender>
-   <signal>clickedLabel()</signal>
+   <sender>exitButton</sender>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>positionOfImage()</slot>
+   <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
+     <x>406</x>
+     <y>441</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>startButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>buttonNext()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>441</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toReplay</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toReplay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>385</y>
+    </hint>
+    <hint type="destinationlabel">
      <x>399</x>
-     <y>172</y>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>changeColorButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>buttonChangeColor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>484</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toStart</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toStart()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>445</x>
+     <y>385</y>
     </hint>
     <hint type="destinationlabel">
      <x>399</x>
@@ -388,34 +778,18 @@
    </hints>
   </connection>
   <connection>
-   <sender>toReplay</sender>
+   <sender>retakeGetC</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>toReplay()</slot>
+   <slot>buttonRetake()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>318</x>
-     <y>385</y>
+     <x>414</x>
+     <y>311</y>
     </hint>
     <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>toStart</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>toStart()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>445</x>
-     <y>385</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
+     <x>414</x>
+     <y>308</y>
     </hint>
    </hints>
   </connection>
@@ -433,5 +807,9 @@
   <slot>ok2Result()</slot>
   <slot>toStart()</slot>
   <slot>toReplay()</slot>
+  <slot>easyFlg()</slot>
+  <slot>hardFlg()</slot>
+  <slot>next2TargetMode()</slot>
+  <slot>buttonChangeColor()</slot>
  </slots>
 </ui>
